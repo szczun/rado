@@ -1,6 +1,6 @@
 // Funkcja do odczytu danych z serwera
 function fetchData() {
-    fetch('/.netlify/functions/counter')
+    fetch('/.netlify/go-functions/counter')
         .then(response => response.json())
         .then(data => {
             document.getElementById('count').textContent = data.count;
@@ -10,7 +10,7 @@ function fetchData() {
 
 // Funkcja do wysyłania zaktualizowanych danych na serwer
 function incrementCounter() {
-    fetch('/.netlify/functions/counter', {
+    fetch('/.netlify/go-functions/counter', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

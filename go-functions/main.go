@@ -13,7 +13,7 @@ type Counter struct {
 
 func main() {
 	http.HandleFunc(
-		"/.netlify/functions/counter",
+		"/.netlify/go-functions/counter",
 		func(w http.ResponseWriter, r *http.Request) {
 			filePath := "./counter.json"
 
